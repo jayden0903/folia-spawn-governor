@@ -11,11 +11,21 @@
 
 <p align="center"><img src="results/worst-case.svg" width="720" alt="Worst case with and without the governor"></p>
 
-### Build
+### Install
+
+1. Download **SpawnGovernor-1.0.0.jar** from [Releases](https://github.com/jayden0903/folia-spawn-governor/releases/latest).
+2. Put it in `plugins/` and restart. Nothing to configure: it stays idle until a region's tick time passes 42 ms.
+3. `/spawngovernor` shows the regions it is tracking. Settings: `plugins/SpawnGovernor/config.yml`, then `/spawngovernor reload`.
+
+Folia 26.2+, Java 25. On Paper it does nothing (Paper has one main thread, no regions).
+
+<details><summary>Build from source</summary>
 
 ```bash
 cd plugin && mvn package      # also runs the 8 unit tests
 ```
+
+</details>
 
 ### Details
 

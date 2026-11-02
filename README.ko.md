@@ -22,10 +22,15 @@ Folia는 보이는 청크만이 아니라 티켓 전파로 생긴 청크 홀더(
 10~25%밖에 안 줄었고, 첫 접속 위치를 더 넓게(±4500 → ±10000) 흩으니 바닐라 설정 그대로 20 TPS가 나왔습니다.
 자세한 건 [docs/region-merging.md](docs/region-merging.md) (영어).
 
-## 빌드
+## 설치
 
-JDK 25와 Maven이 필요합니다. `cd plugin && mvn package` 하면 단위 테스트 8개도 같이 돕니다.
-만든 JAR를 `plugins/`에 넣고 재시작하면 되고, 설정은 `plugins/SpawnGovernor/config.yml`입니다.
+1. [Releases](https://github.com/jayden0903/folia-spawn-governor/releases/latest)에서 **SpawnGovernor-1.0.0.jar**를 받습니다.
+2. `plugins/`에 넣고 재시작합니다. 따로 설정할 것은 없습니다. 리전 틱이 42 ms를 넘기 전까지는 아무것도 하지 않습니다.
+3. `/spawngovernor`로 지켜보는 리전을 봅니다. 설정은 `plugins/SpawnGovernor/config.yml`, 바꾼 뒤 `/spawngovernor reload`.
+
+Folia 26.2 이상, Java 25. Paper에서는 리전이 없어서 동작하지 않습니다.
+
+직접 빌드: JDK 25와 Maven으로 `cd plugin && mvn package` (단위 테스트 8개도 같이 돕니다).
 
 ## 주의
 
